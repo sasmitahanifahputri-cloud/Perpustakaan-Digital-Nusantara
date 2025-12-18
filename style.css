@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    background: #2b59c3;
+    color: white;
+    padding: 40px 15px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #1e3e8a;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    margin: 5px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background: #2b59c3;
+}
+
+.login {
+    background: #ffb703;
+    color: black;
+}
+
+.box {
+    width: 95%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.box h2{
+    text-align: center;
+    color: #1e3e8a;
+    margin-bottom: 15px;
+}
+
+.galeri {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.galeri img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #1e3e8a;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+audio, video {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 15px auto;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+
+footer {
+    background: #1e3e8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width:600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+.running-text {
+    background: #ffb703;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.running-text .text {
+    display: inline-block;
+    font-weight: bold;
+    color: #000;
+    animation-name: jalan;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes jalan {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
